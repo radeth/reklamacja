@@ -59,8 +59,8 @@ function cardValidation(){
   })
 }
 function setCookie(){
-    $('input[type=text]').on('keyup',function(){
-        this._user = $('input[type=text]').val()
+    $('input:nth-of-type(4)').on('keyup',function(){
+        this._user = $('input:nth-of-type(4)').val()
         document.cookie = 'user' + "=" + this._user;
     })
 }
@@ -69,7 +69,7 @@ function setUserName(){
     let cookie = document.cookie.split('=')
     let user = cookie[1]
     console.log(user);
-    $('input[type=text]').attr('value', user)
+    $('input:nth-of-type(4)').attr('value', user)
     
 }
 
