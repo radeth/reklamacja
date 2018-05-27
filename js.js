@@ -2,10 +2,14 @@
 $(document).ready(function() {
 
   console.log('test');
+  
   removeValue();
   mailValidation();
   phoneValidation();
   cardValidation();	
+  setCookie();
+  setUserName();    
+    
 
   
 
@@ -53,6 +57,20 @@ function cardValidation(){
       $(this).css('border-color', '#aaa');
     }
   })
+}
+function setCookie(){
+    $('input[type=text]').on('keyup',function(){
+        this._user = $('input[type=text]').val()
+        document.cookie = 'user' + "=" + this._user;
+    })
+}
+function setUserName(){
+    console.log('test')
+    let cookie = document.cookie.split('=')
+    let user = cookie[1]
+    console.log(user);
+    $('input[type=text]').attr('value', user)
+    
 }
 
 
