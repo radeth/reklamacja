@@ -6,35 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dbtest</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <div>
     <a href="index.html">zapisz</a>
     <br>
     <br>
-
-    <input type="text" id='zapytanie'>
+    <input type="text" id='query'> wyszukaj po nr telefonu <br>
+    <button id='queryButton'>wyszukaj</button>
     <br>
     <div id='result'>
     </div>
     <br>
     <button id="button">wyslij</button>
     <br>
-
-    <div id='form'>
-            <input type="text" disabled value="123" name="id" id="id" ><br>
-            <input type="date" disabled name="date" id="date"><br>
-            <select name="type" id="type" diabled>
-                    <option>one</option>
-                    <option>two</option>
-                </select>
-            </select><br>
-            <input type="text" name="text" id="text"><br>
-            <button id='edytuj'>edit</button>
-            <div id='editInfo'></div>
+</div>
+<div id="logo"></div>
+    <div class="container">
+        <div id="form">
+            <input type="text" id='idNote' disabled>
+            <br>
+            <input type="text" id="type" disabled>
+            <br>
+            <input type="date" id=date disabled>
+            <br>
+            <input type="text" value="e-mail" id="email">
+            <br>
+            <input type="text" value="nr karty" id="card_number">
+            <br>
+            <input type="text" value="nr tel" id="phone_number">
+            <br>
+            <input type="text" value="użytkownik" id="user" disabled>
+            <br>
+            <textarea id="content" cols="30" rows="10"></textarea>
+            <br>
+            <textarea id="description" cols="30" rows="5"></textarea>
+            <br>
+            <button id='edit'>edytuj</button>
+            <br>
+            </form>
+        </div>
     </div>
 
-    <script src="scripts.js"></script>
+    <script src="js/scripts.js"></script>
+    <div id="logo"></div>
 </body>
 
 </html>

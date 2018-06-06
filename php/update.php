@@ -4,12 +4,18 @@ header('Content-Type: application/json');
 require_once "connect.php";
 $connect = @new mysqli($host,$db_user,$dbpassword,$db_name);
 $id = $_POST['id'];
-$text = $_POST['text'];
+$email = $_POST['email'];
+$card_number = $_POST['card_number'];
+$phone_number = $_POST['phone_number'];
+$content = $_POST['content'];
+$description = $_POST['description'];
+
  if($connect->connect_errno!=0){
     echo $connect->connect_errno;
  }else{
-     $querry = "UPDATE test SET text='$text' WHERE id='$id'";
+     $querry = "UPDATE zgloszenia SET card_number='$card_number',phone_number='$phone_number',description='$description',content='$content',email='$email' WHERE id='$id'";
      $result = $connect->query($querry);
+     echo $card_number;
      
      $connect->close();
  }
