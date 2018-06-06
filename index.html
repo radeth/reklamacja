@@ -1,36 +1,50 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </style><link rel="stylesheet" href="style.css">
-    <title></title>
+    <title>dbtest</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-   <header>
-       <div class="container">
-           <div id="form">
-            <form action="">
-             <select name="" id="">
-                 <option value="default"></option>
-                 <option value="points">Reklamacja punktów</option>
-                 <option value="prize">Reklamacja nagrody</option>
-                 <option value="delivery">Reklamacja czasu dostawy</option>
-             </select><br>
-              <input type="text" name="email" value="e-mail" id="email"><br>
-              <input type="text" name="phoneNumber" value="nr tel" id="phoneNumber"><br>
-              <input type="text" name="cardNuber" value="nr karty" id="cardNuber"><br>
-              <input type="text" name=use value="użytkownik" id="user"><br>
-              <textarea name="" id="" cols="30" rows="10"></textarea><br>
-              <input type="submit" value="wyslij"><br>
-              </form>
-           </div>
-           <div id="logo">
-           </div>
-       </div>
-   </header>
-   <script src="jquery-3.3.1.min.js"></script>
-   <script src="js.js"></script>
-    
+
+    <a href="search.html">wyszukaj</a>
+    <br>
+    <div class="container">
+        <div id="form">
+            <select id="type">
+                <option></option>
+                <option>Reklamacja punktów</option>
+                <option>Reklamacja nagrody</option>
+                <option>Reklamacja czasu dostawy</option>
+                <option>Problem Techniczny</option>
+                <option>Dane osobowe</option>
+
+            </select>
+            <br>
+            <input type="date" id=date>
+            <br>
+            <input type="text" value="e-mail" id="email">
+            <br>
+            <input type="text" value="nr karty" id="card_number">
+            <br>
+            <input type="text" value="nr tel" id="phone_number">
+            <br>
+            <input type="text" value="użytkownik" id="user">
+            <br>
+            <textarea id="content" cols="30" rows="10"></textarea>
+            <br>
+            <textarea id="description" cols="30" rows="5"></textarea>
+            <br>
+            <button id='send'>wyslij</button>
+            <br>
+            </form>
+        </div>
+    </div>
+    <script src="js/scripts.js"></script>
 </body>
+
 </html>
