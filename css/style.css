@@ -1,21 +1,26 @@
 @import url("reset.css");
-.container {
-  display: flex; }
+body {
+  font-family: sans-serif; }
 
-input, select {
+p {
+  width: 100px;
+  display: inline-block; }
+
+a {
+  display: block;
+  margin: 3vh; }
+
+input, select, textarea {
+  left: 0;
+  justify-content: space-between;
   border-radius: 0.2rem;
   font-family: sans-serif;
   padding: 0.4rem;
   border: 1px solid #aaa;
   color: #666;
   margin-bottom: 0.1rem;
-  min-width: 189px; }
-
-#logo {
-  margin: 0;
-  background: url(https://www.circlek.pl/cs/CMS/img/circlek_logo.jpg) center no-repeat;
-  min-width: 455px;
-  height: 170px; }
+  min-width: 189px;
+  display: inline; }
 
 #send {
   font-family: sans-serif;

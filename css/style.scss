@@ -1,10 +1,19 @@
 @import url('reset.css');
-.container{
-    display: flex;
-
+body{
+    font-family: sans-serif;
+}
+p{
+    width: 100px;
+    display: inline-block;
+}
+a{
+    display: block;
+    margin: 3vh;
 }
 
-input,select{
+input,select,textarea{
+       left: 0;
+        justify-content: space-between;
         border-radius: 0.2rem;
         font-family: sans-serif;
         padding: 0.4rem;
@@ -12,14 +21,10 @@ input,select{
         color: #666;
         margin-bottom: 0.1rem;
         min-width: 189px;
+       display: inline;
         }
 
-#logo{
-    margin: 0;
-    background: url(https://www.circlek.pl/cs/CMS/img/circlek_logo.jpg) center no-repeat;
-    min-width: 455px;
-    height: 170px;
-}
+
 #send{
     font-family: sans-serif;
     border: 0;

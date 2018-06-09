@@ -16,7 +16,6 @@ function validation() {
         }
         if (regMail.test($(this).val()) == true) {
             err = false;
-            console.log(err)
             $(this).css('border-color', '#aaa');
         }
     })
@@ -27,7 +26,6 @@ function validation() {
         }
         if (regNumbs.test($('#phone_number').val()) == true) {
             err = false;
-            console.log(err)
             $(this).css('border-color', '#aaa');
         }
     })
@@ -38,7 +36,6 @@ function validation() {
         }
         if (regNumbs.test($(this).val()) == true) {
             err = false;
-            console.log(err)
             $(this).css('border-color', '#aaa');
         }
         
@@ -64,7 +61,10 @@ function setUserName() {
 
 function messageAlert(err) {
     $('#send').on('click', function () {
-        console.log(err);
+        if(err==true)
+        alert('wprowadź prawidłowe dane');
+        if(err=false)
+            send();
     })
 }
 
@@ -84,7 +84,8 @@ function send() {
             , date: $('#date').val()
         , }
         , success: function (result) {
-            console.log(result)
+            alert(result)
+            location.href('index.html')
         }
         , error: function (error) {
             console.log(error);
