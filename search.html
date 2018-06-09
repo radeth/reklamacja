@@ -6,52 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dbtest</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="stylesheet" href="css/style.css"> </head>
 
 <body>
-    <div>
-    <a href="index.html">zapisz</a>
-    <br>
-    <br>
-    <input type="text" id='query'> wyszukaj po nr telefonu <br>
-    <button id='queryButton'>wyszukaj</button>
-    <br>
-    <div id='result'>
-    </div>
-    <br>
-    <button id="button">wyslij</button>
-    <br>
-</div>
-<div id="logo"></div>
     <div class="container">
+        <div id="search"> <a href="index.html">zapisz</a>
+            <br>
+            <br>
+            <input type="text" id='query'><br> wyszukaj po <br>
+            
+            <select id="queryType">
+                <option value="phone_number">nr telefonu</option>
+                <option value="card_number">nr karty</option>
+            </select>
+            <br>
+            <button id='queryButton'>wyszukaj</button>
+            <br>
+            <div id='result'> </div>
+            <br>
+            <button id="button">wyslij</button>
+            <br> </div>
+            
         <div id="form">
+           <p>id zgloszenie</p>
             <input type="text" id='idNote' disabled>
             <br>
+            <p>typ reklamacji</p>
             <input type="text" id="type" disabled>
             <br>
+            <p>data zgłoszenia</p>
             <input type="date" id=date disabled>
             <br>
+            <p>email</p>
             <input type="text" value="e-mail" id="email">
             <br>
+            <p>nr karty</p>
             <input type="text" value="nr karty" id="card_number">
             <br>
+            <p>nr tel</p>
             <input type="text" value="nr tel" id="phone_number">
             <br>
+            <p>użytkownik<p>
             <input type="text" value="użytkownik" id="user" disabled>
             <br>
+            <p>tresc zgloszenia</p>
             <textarea id="content" cols="30" rows="10"></textarea>
             <br>
+            <p>opis</p>
             <textarea id="description" cols="30" rows="5"></textarea>
             <br>
             <button id='edit'>edytuj</button>
-            <br>
-            </form>
+            <br> </form>
         </div>
     </div>
-
-    <script src="js/scripts.js"></script>
-    <div id="logo"></div>
+    <script src="js/editjs.js"></script>
 </body>
 
 </html>

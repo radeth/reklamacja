@@ -14,8 +14,9 @@
     <a href="search.html">wyszukaj</a>
     <br>
     <div class="container">
-            <div id="logo"></div>
+            <!-- <div id="logo"></div> -->
         <div id="form">
+                <p>Typ rekalamcji</p>
             <select id="type">
                 <option></option>
                 <option>Reklamacja punktów</option>
@@ -23,21 +24,27 @@
                 <option>Reklamacja czasu dostawy</option>
                 <option>Problem Techniczny</option>
                 <option>Dane osobowe</option>
-
             </select>
             <br>
+            <p>data</p>
             <input type="date" id=date>
             <br>
-            <input type="text" value="e-mail" id="email">
+            <p>email</p>
+            <input type="text" id="email">
             <br>
-            <input type="text" value="nr karty" id="card_number">
+            <p>nr karty</p>
+            <input type="text" id="card_number">
             <br>
-            <input type="text" value="nr tel" id="phone_number">
+            <p>nr telefonu</p>
+            <input type="text" id="phone_number">
             <br>
-            <input type="text" value="użytkownik" id="user">
+            <p>użytkownik</p>
+            <input type="text"  id="user">
             <br>
+            <p>treśc</p>
             <textarea id="content" cols="30" rows="10"></textarea>
             <br>
+            <p>opis</p>
             <textarea id="description" cols="30" rows="5"></textarea>
             <br>
             <button id='send'>wyslij</button>
@@ -45,7 +52,7 @@
             
         </div>
     </div>
-    <script src="js/scripts.js"></script>
+    <script src="js/sendjs.js"></script>
     
 </body>
 

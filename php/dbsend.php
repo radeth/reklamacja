@@ -13,7 +13,7 @@ $connect = @new mysqli($host,$db_user,$dbpassword,$db_name);
  if($connect->connect_errno!=0){
     echo $connect->connect_errno;
  }else{
-     $querry = "INSERT INTO `zgloszenia` (`id`, `type`, `email`, `card_number`, `phone_number`, `user`, `content`, `description`, `date`) VALUES (NULL, '$type', '$email', '$card_number', '$phone_number', '$content', '$description', '$date', '2018-06-06');";
+     $querry = "INSERT INTO `zgloszenia` (`id`, `type`, `email`, `card_number`, `phone_number`, `user`, `content`, `description`, `date`) VALUES (NULL, '$type','$email','$card_number','$phone_number','$user','$content','$description','$date');";
      $connect->query($querry);
      $connect->close();
      echo "data send";

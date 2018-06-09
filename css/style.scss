@@ -1,7 +1,7 @@
 @import url('reset.css');
 .container{
     display: flex;
-    flex-direction: column;
+
 }
 
 input,select{
@@ -19,4 +19,11 @@ input,select{
     background: url(https://www.circlek.pl/cs/CMS/img/circlek_logo.jpg) center no-repeat;
     min-width: 455px;
     height: 170px;
+}
+#send{
+    font-family: sans-serif;
+    border: 0;
+    padding: 1.2rem;
+    border-radius: 0.2rem;
+    font-weight: bold;
 }
