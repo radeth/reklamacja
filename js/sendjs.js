@@ -1,49 +1,39 @@
 'use strict';
 $(document).ready(function () {
-    validation();
     setCookie();
     setUserName();
 })
 
 function validation() {
-    var err = true;
     let regMail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     let regNumbs = /\d/;
-    $('#email').on('keyup', function () {
-        if (regMail.test($(this).val()) == false) {
+    console.log($('#email').val());
+        if (regMail.test($('#email').val()) == false) {
             err = true;
             $(this).css('border-color', 'red');
         }
-        if (regMail.test($(this).val()) == true) {
+        else{
             err = false;
             $(this).css('border-color', '#aaa');
         }
-    })
-    $('#phone_number').on('keyup', function () {
         if (regNumbs.test($('#phone_number').val()) == false) {
             err = true;
             $(this).css('border-color', 'red');
         }
-        if (regNumbs.test($('#phone_number').val()) == true) {
+        else{
             err = false;
             $(this).css('border-color', '#aaa');
         }
-    })
-    $('#card_number').on('keyup', function () {
-        if (regMail.test($(this).val()) == false) {
+        if (regMail.test($('#card_nubmer').val()) == false) {
             err = true;
             $(this).css('border-color', 'red');
         }
-        if (regNumbs.test($(this).val()) == true) {
+       else{
             err = false;
             $(this).css('border-color', '#aaa');
-        }
-        
-        
-    })
-    messageAlert(err);
+        }  
+        return err;
 }
-
 function setCookie() {
     $('#send').on('click', function () {
         this._user = $('#user').val()
@@ -52,19 +42,20 @@ function setCookie() {
 }
 
 function setUserName() {
-    console.log('test')
     let cookie = document.cookie.split('=')
     let user = cookie[1]
     console.log(user);
     $('#user').attr('value', user)
 }
 
-function messageAlert(err) {
+function messageAlert() {
+    var err = true;
     $('#send').on('click', function () {
-        if(err==true)
-        alert('wprowadź prawidłowe dane');
-        if(err=false)
+        if(validation()==true)
+        alert('wprowadz prawidlowe dane')
+        else{
             send();
+        }
     })
 }
 
@@ -85,7 +76,7 @@ function send() {
         , }
         , success: function (result) {
             alert(result)
-            location.href('index.html')
+            location.href = './index.html'
         }
         , error: function (error) {
             console.log(error);

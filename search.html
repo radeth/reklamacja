@@ -10,25 +10,23 @@
 
 <body>
     <div class="container">
-        <div id="search"> <a href="index.html">zapisz</a>
+        <div class='container--form' id="search"> <a href="index.html">zapisz</a>
             <br>
             <br>
-            <input type="text" id='query'><br> wyszukaj po <br>
-            
+            <p>wyszukaj po</p>
             <select id="queryType">
                 <option value="phone_number">nr telefonu</option>
                 <option value="card_number">nr karty</option>
             </select>
+            <input type="text" id='query'>
             <br>
             <button id='queryButton'>wyszukaj</button>
             <br>
             <div id='result'> </div>
             <br>
-            <button id="button">wyslij</button>
             <br> </div>
-            
-        <div id="form">
-           <p>id zgloszenie</p>
+        <div id="container--form">
+            <p>id zgloszenie</p>
             <input type="text" id='idNote' disabled>
             <br>
             <p>typ reklamacji</p>
@@ -38,16 +36,16 @@
             <input type="date" id=date disabled>
             <br>
             <p>email</p>
-            <input type="text" value="e-mail" id="email">
+            <input type="text"  id="email">
             <br>
             <p>nr karty</p>
-            <input type="text" value="nr karty" id="card_number">
+            <input type="text"  id="card_number">
             <br>
             <p>nr tel</p>
-            <input type="text" value="nr tel" id="phone_number">
+            <input type="text" id="phone_number">
             <br>
-            <p>użytkownik<p>
-            <input type="text" value="użytkownik" id="user" disabled>
+            <p>użytkownik </p>
+            <input type="text" id="user" disabled>
             <br>
             <p>tresc zgloszenia</p>
             <textarea id="content" cols="30" rows="10"></textarea>

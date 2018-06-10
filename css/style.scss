@@ -2,12 +2,16 @@
 body{
     font-family: sans-serif;
 }
+.container{
+   display: flex;
+    
+}
 p{
     width: 100px;
     display: inline-block;
 }
 a{
-    display: block;
+    display: inline-block;
     margin: 3vh;
 }
 

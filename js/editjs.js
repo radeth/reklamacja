@@ -17,7 +17,7 @@ function search() {
             success: function (result) {
                 let resHTML = '';
                 for (var i = 0; i < result.length; i++) {
-                    resHTML += '<a href="#" class="member" id=' + i + '>' + result[i].id + '</a>' + ' ' + result[i].date + ' ' + result[i].type + ' ' + result[i].content +' '+result[i].description+'<br>';
+                    resHTML += '<a href="#" class="member" id=' + i + '>' + result[i].id + '</a>'+result[i].description+'<br>';
                     $('#result').html(resHTML);
                 }
                 edit(result);
@@ -64,6 +64,7 @@ function sendEdit() {
             },
             success: function (result) {
                 console.log(result)
+                alert();
             },
             error: function (error) {
                 console.log(error);
@@ -71,4 +72,7 @@ function sendEdit() {
         });
     })
 }
-
+function alert(){
+    console.log('test')
+    alert('dokonano edycji')
+}
