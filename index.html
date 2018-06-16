@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dbtest</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <a href="search.html">wyszukaj</a>
+    <br>
+    <div class="container">
+        <div class='container--form'>
+                <p>Typ rekalamcji</p>
+            <select id="type">
+                <option></option>
+                <option>Reklamacja punktów</option>
+                <option>Reklamacja nagrody</option>
+                <option>Reklamacja czasu dostawy</option>
+                <option>Problem Techniczny</option>
+                <option>Dane osobowe</option>
+            </select>
+            <br>
+            <p>data</p>
+            <input type="date" id=date>
+            <br>
+            <p>email</p>
+            <input type="text" id="email">
+            <br>
+            <p>nr karty</p>
+            <input type="text" id="card_number">
+            <br>
+            <p>nr telefonu</p>
+            <input type="text" id="phone_number">
+            <br>
+            <p>użytkownik</p>
+            <input type="text"  id="user">
+            <br>
+            <p>treśc</p>
+            <textarea id="content" cols="30" rows="8"></textarea>
+            <br>
+            <p>opis</p>
+            <textarea id="description" cols="30" rows="5"></textarea>
+            <br>
+            <button id='send'>wyslij</button>
+            <br>
+        </div>
+    </div>
+    <script src="js/sendjs.js"></script>
+    
+</body>
+
+</html>

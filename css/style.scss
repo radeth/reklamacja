@@ -1,0 +1,44 @@
+@import url('reset.css');
+body{
+    font-family: sans-serif;
+}
+.container{
+   display: flex;
+    
+}
+p{
+    width: 100px;
+    display: inline-block;
+}
+a{
+    display: inline-block;
+    margin: 3vh;
+}
+.container--form{
+    border: 1px solid red;
+
+}
+#result{
+    
+}
+input,select,textarea{
+       left: 0;
+        justify-content: space-between;
+        border-radius: 0.2rem;
+        font-family: sans-serif;
+        padding: 0.4rem;
+        border: 1px solid #aaa;
+        color: #666;
+        margin-bottom: 0.1rem;
+        min-width: 189px;
+       display: inline;
+        }
+
+
+#send{
+    font-family: sans-serif;
+    border: 0;
+    padding: 1.2rem;
+    border-radius: 0.2rem;
+    font-weight: bold;
+}
